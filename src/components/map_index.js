@@ -7,7 +7,13 @@ class MapIndex extends Component {
   render() {
 
     return(
-      <div> Testing Route 1 with info page</div>
+      <div>
+
+      Add navbar here
+
+
+      </div>
+
     );
   };
 }
