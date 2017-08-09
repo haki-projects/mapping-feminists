@@ -8,7 +8,7 @@ class MapIndex extends Component {
   componentDidMount() {
     this.props.fetchBooks();
   }
-
+//Turn this into a table of book information
   renderBooks() {
     return _.map(this.props.books, book => {
       return (<li className='list-group-item' key={book.id}>
@@ -20,9 +20,9 @@ class MapIndex extends Component {
   render() {
 
     return(
-      <div>
+      <div className='container'>
 
-      Add navbar here
+      <h2 className='text-center'> Books </h2>
       <ul className='list-group'>
           {this.renderBooks()}
       </ul>
