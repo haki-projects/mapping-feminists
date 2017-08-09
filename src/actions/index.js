@@ -10,8 +10,8 @@ const config = {
     storageBucket: "mapping-feminists.appspot.com",
     messagingSenderId: "526879896757"
   };
-  const email = 'haki.projects@gmail.com';
-  const password = 'H!tokiru123';
+  const email = 'dummyUser@gmail.com';
+  const password = '123456';
 
 Firebase.initializeApp(config);
 const Books = Firebase.database();
