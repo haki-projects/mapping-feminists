@@ -2,8 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchBooks } from '../actions'; //import the action function we will be using
 import _ from 'lodash';
-
+import { getUser } from './authentication';
 class MapIndex extends Component {
+
+    componentWillMount(){
+    if(getUser()){
+      //set user info to state
+    } else {
+      console.log('not good, user not logged in');
+       this.props.history.push('/');
+    }
+  }
 
   componentDidMount() {
     this.props.fetchBooks();
