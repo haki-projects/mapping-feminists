@@ -11,6 +11,7 @@ import MapIndex from './components/map_index';
 import Home from './components/home';
 import StudentData from './components/student';
 import Login from './components/login';
+import firebase from 'firebase';
 
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);

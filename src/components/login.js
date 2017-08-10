@@ -36,7 +36,6 @@ class Login extends Component {
     loginSuccess(user) {
       console.log('we logged in!', user);
       this.props.loginUser(user)
-    {this.props.pushToMap()};
     }
 
   onSubmit(values) {
@@ -47,10 +46,6 @@ class Login extends Component {
       const errorMessage = getEmailPasswordError(error);
       console.log(errorMessage); //output error message somewhere
     });
-     //this.setState({ error_message: errorMessage, loading: false });
-
-
-
 
   }
 
@@ -100,10 +95,13 @@ class Login extends Component {
 }
 
 function validate(values){
-
   const errors={};
   return errors;
 }
 
+function mapStateToProps({ user }) {
+  return { current_user: user };
+}
+
 export default reduxForm({validate,form: 'LoginUserForm'})
-(connect(null, { loginUser })(Login)) ;
+(connect(mapStateToProps, { loginUser })(Login)) ;

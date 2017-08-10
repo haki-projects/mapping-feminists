@@ -21,7 +21,7 @@ export function fetchBooks(){
   };
 }
 
-export function loginUser( user, backToIndex ) {
+export function loginUser( user) {
   return {
     type: LOGIN_USER,
     payload: user
